@@ -1,18 +1,6 @@
 #include "inverted.h"
 #include <ctype.h>
 
-char *getWord(FILE *fptr){
-
-  char *buffer = malloc(sizeof(char) * 100);
-
-  if(fscanf(fptr, "%99s", buffer) != 1){
-    free(buffer);
-    return NULL;
-  }
-
-  return buffer;
-}
-
 int createDatabase(hashTable *hash_t, char *file){
   
   /* Open the file */

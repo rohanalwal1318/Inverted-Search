@@ -39,4 +39,10 @@ int saveDatabase(hashTable *hash_t, char *fileName);
 /* search HashTable*/
 int searchDatabase(hashTable *hash_t, char *target);
 
+/* An helper function to check repeated files passed as an input in a single call, return 1 if found 0 if not*/
+int checkDup(char dup[50][100], char *str, int n);
+
+/* Get the single word from the file NULL if word is not there (File is empty) */
+char *getWord(FILE *fptr);
+
 #endif

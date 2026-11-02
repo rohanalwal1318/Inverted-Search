@@ -1,0 +1,19 @@
+CC = gcc
+CFLAGS = -Wall -Wextra -std=c11
+
+SRC = test/main.c Operations/createDatabase.c Operations/displayDatabase.c Operations/searchDatabase.c Operations/saveDatabase.c
+
+OBJ = $(SRC:.c=.o)
+
+TARGET = inverted
+
+all: $(TARGET)
+
+$(TARGET): $(OBJ)
+	$(CC) $(CFLAGS) $(OBJ) -o $(TARGET)
+
+%.o: %.c
+	$(CC) $(CFLAGS) -Iinclude -c $< -o $@
+
+clean:
+	rm -f $(OBJ) $(TARGET)

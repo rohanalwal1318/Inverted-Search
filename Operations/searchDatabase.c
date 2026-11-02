@@ -5,7 +5,6 @@ int searchDatabase(hashTable *hash_t, char *target){
   int idx = target[0] - 'a';
 
   if(hash_t[idx].link == NULL) {
-    printf("Data Not found!!\n");
     return 0;
   }
 
@@ -16,7 +15,7 @@ int searchDatabase(hashTable *hash_t, char *target){
   }
 
   if(mnode == NULL) {
-    printf("Target Not Found!!\n");
+    return 0;
   }
 
   printf("Target - %s, File Count : %d, ", target, mnode->file_cnt);
