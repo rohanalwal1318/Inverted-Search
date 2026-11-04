@@ -55,6 +55,31 @@ int main(){
         continue;
       }
 
+      case 3: {
+        char str[100];
+        printf("Enter the saved database file name : ");
+        scanf("%99s", str);
+        f = updateDatabase(hash_t, str);
+        if(!f) {
+          puts("Failed while Updating Database !!");
+          continue;
+        }
+        /* files that came from the saved database count as already processed */
+        for(int i=0; i<26; i++){
+          for(mainNode *m = hash_t[i].link; m; m = m->mainLink){
+            for(subNode *s = m->subLink; s; s = s->subLink){
+              if(j < 50 && !checkDup(dup, s->file_name, j)){
+                strncpy(dup[j], s->file_name, 99);
+                dup[j][99] = '\0';
+                j++;
+              }
+            }
+          }
+        }
+        puts("Successfully Updated Database!!");
+        continue;
+      }
+
       case 4: {
         char str[100];
         printf("Enter the word you want to search : ");

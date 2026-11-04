@@ -29,7 +29,7 @@ int createDatabase(hashTable *hash_t, char *file){
   if(hash_t[idx].link == NULL){
     /* create a subnode */
     subNode *snode = malloc(sizeof(subNode) * 1);
-    snode->file_name = file;
+    snode->file_name = copyString(file);
     snode->subLink = NULL;
     snode->word_cnt = 1;
 
@@ -59,7 +59,7 @@ int createDatabase(hashTable *hash_t, char *file){
   if(temp == NULL && prev != NULL){
     /* create a subnode */
     subNode *snode = malloc(sizeof(subNode) * 1);
-    snode->file_name = file;
+    snode->file_name = copyString(file);
     snode->subLink = NULL;
     snode->word_cnt = 1;
 
@@ -95,7 +95,7 @@ int createDatabase(hashTable *hash_t, char *file){
     else{
       /*create a subnode */
       subNode *snodee = malloc(sizeof(subNode) * 1);
-      snodee->file_name = file;
+      snodee->file_name = copyString(file);
       snodee->subLink = NULL;
       snodee->word_cnt = 1;
       p2->subLink = snodee;

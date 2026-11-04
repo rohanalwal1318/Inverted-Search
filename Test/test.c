@@ -28,5 +28,7 @@ int main()
   if (f == 0)
     return printf("Failed");
 
+  deleteHashTable(hash_t);
+
   
 }

@@ -11,27 +11,28 @@ int saveDatabase(hashTable *hash_t, char *fileName){
   {
 
     if (hash_t[i].link != NULL)
-    {
+    { 
       mainNode *mnode = hash_t[i].link;
       while (mnode)
       {
-        fprintf(fptr, "Index: [%d], ", i);
-        fprintf(fptr, "Word: %s, ", mnode->word);
-        fprintf(fptr, "Files: %d, ", mnode->file_cnt);
+        /* #index;word;file_count;file1;count1;file2;count2;# */
+        fprintf(fptr, "#%d;", i);
+        fprintf(fptr, "%s;", mnode->word);
+        fprintf(fptr, "%d;", mnode->file_cnt);
         subNode *snode = mnode->subLink;
         while (snode)
         {
-          fprintf(fptr, "%s ", snode->file_name);
-          fprintf(fptr, "%d times, ", snode->word_cnt);
+          fprintf(fptr, "%s;", snode->file_name);
+          fprintf(fptr, "%d;", snode->word_cnt);
           snode = snode->subLink;
         }
-        fprintf(fptr, "\n");
+        fprintf(fptr, "#\n");
         mnode = mnode->mainLink;
       }
     }
   }
    
-  fclose(fptr); 
+  if(fclose(fptr) != 0) return 0;
   
   return 1;
 

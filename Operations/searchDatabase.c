@@ -26,6 +26,8 @@ int searchDatabase(hashTable *hash_t, char *target){
     snode = snode->subLink;
   }
 
+  printf("\n");
+  
   return 1;
 
 }

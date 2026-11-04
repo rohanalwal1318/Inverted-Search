@@ -1,0 +1,7 @@
+#0;apple;2;input.txt;2;input2.txt;1;#
+#0;ant;2;input.txt;1;input2.txt;1;#
+#2;cat;2;input.txt;1;input2.txt;1;#
+#2;car;2;input.txt;1;input2.txt;1;#
+#3;dodo;1;input2.txt;1;#
+#4;emertxe;2;input.txt;1;input2.txt;1;#
+#4;embedded;1;input.txt;1;#

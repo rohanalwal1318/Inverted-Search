@@ -1,6 +1,7 @@
-Index: [0], Word: apple, Files: 2, input.txt 2 times, input2.txt 1 times, 
-Index: [0], Word: ant, Files: 2, input.txt 1 times, input2.txt 1 times, 
-Index: [2], Word: cat, Files: 2, input.txt 1 times, input2.txt 1 times, 
-Index: [2], Word: car, Files: 2, input.txt 1 times, input2.txt 1 times, 
-Index: [3], Word: dodo, Files: 1, input2.txt 1 times, 
-Index: [4], Word: emertxe, Files: 2, input.txt 1 times, input2.txt 1 times,
+#0;apple;2;input.txt;2;input2.txt;1;#
+#0;ant;2;input.txt;1;input2.txt;1;#
+#2;cat;2;input.txt;1;input2.txt;1;#
+#2;car;2;input.txt;1;input2.txt;1;#
+#3;dodo;1;input2.txt;1;#
+#4;emertxe;2;input.txt;1;input2.txt;1;#
+#4;embedded;1;input.txt;1;#
